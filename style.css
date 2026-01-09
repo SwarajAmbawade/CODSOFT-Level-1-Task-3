@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.cal {
+    text-align: center;
+    color: #38bdf8;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1.6rem;
+  text-align: right;
+  background: #020617;
+  color: #38bdf8;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  height: 55px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  background: rgba(56, 189, 248, 0.25);
+  transform: scale(1.05);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+button:last-child {
+  background: rgba(56, 189, 248, 0.8);
+  color: #020617;
+}
+
+.equalto {
+  background: rgba(248, 123, 56, 0.8);
+  color: #020617;
+  height: 120px;
+}
+
+/* Make equal button span two rows */
+.equal {
+  grid-row: span 2;
+  background: #d97745; /* orange accent */
+  color: #020617;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.equal:hover {
+  background: #f97316; /* brighter orange on hover */
+}
